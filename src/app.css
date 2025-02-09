@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slide-left {
+  animation-name: slideLeft;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}
+
+.slide-right {
+  animation-name: slideRight;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.number-pop {
+  animation: pop 0.2s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark .dial-button {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark .panel {
+  background-color: #2d2d2d;
+}
+
+ActionBar {
+  background-color: #65adf1;
+  color: white;
+}
+
+.dark ActionBar {
+  background-color: #1a1a1a;
+}
+
+/* Fix Call Button */
+.call-button {
+  width: 80px;
+  height: 80px;
+  background-color: #28a745; /* Green */
+  color: white;
+  font-size: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Fix Delete Button */
+.delete-button {
+  width: 64px;
+  height: 64px;
+  background-color: #d1d5db; /* Light Gray */
+  color: black;
+  font-size: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.dark .delete-button {
+  background-color: #4b5563; /* Dark Gray */
+  color: white;
+}
